@@ -5,11 +5,11 @@
 ## Defining a function
 
 ```javascript
-var greet = function() {
+var greeting = function() {
   console.log("Hello World");
 };
 
-greet();
+greeting();
 
 ```
 
@@ -27,7 +27,27 @@ greeting(name);
 greeting(name2);
 ```
 
+## Defining a function with two parameters
+
+```javascript
+var greeting = function (name, question) {
+  // anything inside of here will execute when called
+  console.log("Good morning", name, question);
+  console.log("name:", name);
+  console.log("question:", question);
+};
+
+greeting('Jenny', 'how was your weekend?');
+
+var name = "Bernie";
+var question = "how is the campaign?";
+greeting(name, question);
+
+```
+
 ## Why use functions?
+
+Functions are the bread and butter of JavaScript programming. The concept of wrapping a piece of program in a value has many uses. Functions are used to structure larger programs, to reduce repetition, to associate names with subprograms, and to isolate these subprograms from each other.
 
 ### Let's greet some instructors
 
@@ -37,16 +57,14 @@ console.log("Hello " + instructor); // Hello Caleb
 
 var instructor = "Jenny";
 console.log("Hello " + instructor); // Hello Jenny
-```
 
-### Let's greet some students
+// let's greet some students too
 
-```javascript
-var student = "Robby";
-console.log("Hello " + student);  // Hello Robby
+var student = "Nathan";
+console.log("Hello " + student);  // Hello Nathan
 
-var student = "Ariel";
-console.log("Hello " + student); // Hello Ariel
+var student = "Rachel";
+console.log("Hello " + student); // Hello Rachel
 ```
 
 ## So what does this have to do with functions?
@@ -66,12 +84,12 @@ var greeting = function(person) {
 };
 
 // Now let's greet some instructors...
-greeter("Caleb");
-greeter("Jenny");
+greeting("Caleb");
+greeting("Jenny");
 
 // ... and some cats.
-greeter("Otis");
-greeter("Bodhi");
+greeting("Otis");
+greeting("Bodhi");
 ```
 
 ###Functions make our code easier to maintain
@@ -83,27 +101,8 @@ var greeting = function(person) {
 };
 
 // Now let's greet some people...
-greeter("Bernie Sanders");
-greeter("Donald Trump");
-```
-
-
-## Defining a function with two parameters
-
-```javascript
-var greeting = function (name, question) {
-  // anything inside of here will execute when called
-  console.log("Good morning", name, question);
-  console.log("name:", name);
-  console.log("question:", question);
-};
-
-greeting('Jenny', 'how was your weekend?');
-
-var name = "Bernie";
-var question = "how is the campaign?";
-greeting(name, question);
-
+greeting("Bernie Sanders");
+greeting("Donald Trump");
 ```
 
 ## Returning values
@@ -125,4 +124,4 @@ console.log(newNumber);
 ```
 
 ##Putting the 'fun' in function()
-Function mini-exercise
+You know the drill...open main.js and begin!!
