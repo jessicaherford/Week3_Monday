@@ -123,9 +123,6 @@ var newNumber = yourNumber + summedNumber;
 console.log(newNumber);
 
 ```
-##Named Functions vs Anonymous Functions
-
-##Function Declaration Syntax vs Function Expression Syntax
 
 ##Putting the 'fun' in function()
 Function mini-exercise
