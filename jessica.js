@@ -21,11 +21,30 @@ console.log(greeting("Spencer", "Kelly"));
 // 3. You use Amazon Subscribe & Save to have six cans of cashews automatically sent to you each month, but the price keeps changing.
 //    Write a function that takes the price per unit and calculates the total for you each month.
 console.log("Question 3");
-var cashews = function()
-
+var cashews = function(price, cans){
+  return price * cans;
+}
+var price = 5;
+var cans = 6;
+console.log(cashews(5,6));
 // 4. Write a function that accepts the following array and separates the people into two teams.
 //    No names next to eachother in the array should be on the same team.
       teammates = ["Harold", "Bob", "Sue", "Grady", "Notorious B.I.G.", "JavaCrypt", "Weird guy in the back", "Gary", "Carol", "Hipster Tim", "Janet"]
+var team1 = [];
+var team2 = [];
+var splitTeams = function (teammates){
+  for(i=0; i < teammates.length; i++){
+    if(i%2==0){
+      team1.push(teammates[i]);
+    }
+    else{
+      team2.push(teammates[i]);
+    }
+
+  }
+  console.log(team1, team2);
+};
+splitTeams(teammates);
 
 // 5. Define a function called "quarter". It accepts one parameter called "number".
 //    The function will return a value which is one quarter of the number provided.
@@ -38,24 +57,94 @@ var cashews = function()
 //                      print out a statement saying the number is even
 //                  else
 //                      print out a statement saying the number is odd
+console.log('Question 5');
+var quarter = function(number){
+  return number/4;
+  console.log(number/4);}
+
+  console.log(quarter(12));
+
+  if(quarter%2 === 0){
+    console.log('The number is even!');
+  }
+  else{
+    console.log('The number is odd!');
+  }
 
 // 6. Define functions called "area" and "perimeter". They should both accept two parameters and calculate the area and perimeter of a rectangle.
+console.log('Question 6');
 
+var area = function(length, width){
+  return length * width;
+}
+
+var perimeter = function (length, width){
+  return length*2 + width*2;
+}
+console.log(area(5,2));
+console.log(perimeter(5,2));
 // 7. Write a function called "sleepings", it should accept one parameter, an integer called "hours".
 //    Write a conditional statement inside of the function. If the number of hours is more than 8, print a statement to the console about getting enough rest.
 //    If the number of hours is less than 8, print a statement recommending the user get more shut eye.
-
+var sleepings = function(hours){
+  if(hours>8){
+    console.log("You are getting enough sleep!");
+  }
+  else{
+    console.log("You should get some more shut eye!");
+  }
+}
+console.log(sleepings(9));
+console.log(sleepings(5));
 // 8. Prompt a user to enter a six digit number. Write a function that reverses the number.
 //    (Hint, you will have to turn the integer into a string before you can reverse it.)
+console.log('Question 8 & 9');
+
+var userAnswer = prompt("Enter a six digit number.");
+
+console.log(userAnswer);
+
+var reverseAnswer = function(answer){
+  if(userAnswer.length != 6){
+    var secondChance = prompt("Hey! I said a six digit number!")
+      //console.log(reverseAnswer(secondChance));
+  }
+  else{
+  return answer.split('').reverse().join('');
+  return ( parseInt( (answer + '').split('').reverse().join('') ) );}
+}
+console.log(userAnswer.length);
+alert(reverseAnswer(userAnswer));
 
 // 9. Within the fuction you wrote in #7, write a conditional statement that checks to ensure the user entered a six digit integer.
 //    If they have not entered a six digit integer, give them a message about being a failure.
 
+
 // 10. You've finally gotten around to counting the change in your piggy bank. Write a function that accepts four parameters (quarters, dimes, nickels, and pennies).
 //     The function should take each number of coins and multiply it times each coin's value.
 //     Finally, it should return the total amount of change you have in the following format: "$32.77"
+console.log('Question 10');
+var piggyBank = function(quarters, dimes, nickels, pennies){
+  var quarterTotal = quarters/4;
+  var dimeTotal = dimes/10;
+  var nickelTotal = nickels/5;
+  var pennyTotal = pennies/100;
+  var total = (quarterTotal + dimeTotal + nickelTotal + pennyTotal);
+  console.log('$' + total);
+};
+ piggyBank(22, 10, 5, 1);
 
 // 11. Develop a function that determines a person's age by prompting them for their birth year.
+console.log('Question 11');
+var yearBorn = prompt('What year where you born?');
+console.log(yearBorn);
+var userAge = function(ageNumber){
+  var age = 2015 - yearBorn;
+  return age;
+  alert('You are ' + age + ' years old!');
+}
+
+userAge(yearBorn);
 
 // 12. Write a function that takes a year and reports whether or not it is a leap year.
 //     Remember, a leap year occurs:
