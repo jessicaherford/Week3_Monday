@@ -138,7 +138,8 @@ var piggyBank = function(quarters, dimes, nickels, pennies){
 console.log('Question 11');
 var yearBorn = prompt('What year where you born?');
 console.log(yearBorn);
-var userAge = function(ageNumber){
+var userAge = function(ageNumber)
+{
   var age = 2015 - yearBorn;
   return age;
   alert('You are ' + age + ' years old!');
